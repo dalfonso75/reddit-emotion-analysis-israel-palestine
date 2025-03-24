@@ -1,0 +1,8 @@
+# Ignore Python cache files
+__pycache__/
+
+# Ignore zip files
+*.zip
+
+# Ignore the reddit_dataset folder
+reddit_dataset/
