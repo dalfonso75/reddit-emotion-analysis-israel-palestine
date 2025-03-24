@@ -55,6 +55,7 @@ For the purpose of emotion classification and temporal analysis, we have selecte
 | `created_time`         | Timestamp of the comment, essential for analyzing temporal trends in expressed emotions.                    |
 | `subreddit`            | Indicates the community where the comment was posted, useful for comparing emotional patterns across topics. |
 | `score`                | Total score of the comment (upvotes minus downvotes), useful to correlate engagement with specific emotions.  |
+| `post_title`           | Title of the original post, provides additional context that may influence the emotions expressed in comments. |
 
 ---
 
