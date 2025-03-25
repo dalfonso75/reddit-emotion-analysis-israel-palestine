@@ -6,3 +6,6 @@ __pycache__/
 
 # Ignore the reddit_dataset folder
 reddit_dataset/
+
+# Ignore full dataset
+data/*.csv

@@ -1,6 +1,6 @@
-
 import re
 import string
+import emoji
 
 class RedditTextCleaner:
     """
@@ -38,16 +38,10 @@ class RedditTextCleaner:
         self.lowercase = lowercase
 
         # Precompile regex patterns for performance
-        self.url_pattern = re.compile(r'http\S+|www\.\S+')
+        self.url_pattern = re.compile(r'http\S+|www.\S+')
         self.mention_pattern = re.compile(r'@\w+')
         self.hashtag_pattern = re.compile(r'#\w+')
         self.extra_spaces_pattern = re.compile(r'\s+')
-        self.emoji_pattern = re.compile("["
-            u"\U0001F600-\U0001F64F"  # emoticons
-            u"\U0001F300-\U0001F5FF"  # symbols & pictographs
-            u"\U0001F680-\U0001F6FF"  # transport & map symbols
-            u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
-            "]+", flags=re.UNICODE)
 
         # Define punctuation to remove but KEEP ? ! and '
         exclude_chars = string.punctuation.replace("?", "").replace("!", "").replace("'", "")
@@ -70,9 +64,9 @@ class RedditTextCleaner:
             if self.remove_hashtags:
                 text = self.hashtag_pattern.sub('', text)
 
-            # Remove emojis
+            # Remove emojis using emoji library
             if self.remove_emojis:
-                text = self.emoji_pattern.sub('', text)
+                text = emoji.replace_emoji(text, replace='')
 
             # Remove punctuation except ? ! and '
             text = text.translate(self.remove_punct_table)
