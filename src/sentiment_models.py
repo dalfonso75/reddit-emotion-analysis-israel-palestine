@@ -9,9 +9,9 @@ from transformers import (
 import pandas as pd
 
 
-class EmotionAnalyzer:
+class EmotionAnalyzerDistilBERT:
     """
-    EmotionAnalyzer uses a pre-trained Hugging Face modsel to classify emotions in text.
+    EmotionAnalyzerDistilBERT uses a pre-trained Hugging Face modsel to classify emotions in text.
     Supported emotions: anger, fear, joy, love, sadness, surprise.
 
     Attributes:
