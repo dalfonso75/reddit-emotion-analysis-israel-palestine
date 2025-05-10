@@ -8,4 +8,4 @@ __pycache__/
 reddit_dataset/
 
 # Ignore full dataset
-data/*.csv
+data/*
