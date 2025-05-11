@@ -1,5 +1,7 @@
 # reddit-emotion-analysis-israel-palestine
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dalfonso75/reddit-emotion-analysis-israel-palestine)
+
 ## 📄 Project Overview
 
 This project focuses on analyzing the emotional dynamics expressed in Reddit comments related to the Israel-Palestine conflict. By leveraging pre-trained Natural Language Processing (NLP) models from Hugging Face, we aim to classify and visualize the predominant emotions in the digital conversation, as well as observe their evolution over time.
